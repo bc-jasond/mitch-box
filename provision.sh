@@ -10,13 +10,15 @@ apt-get update ;
 apt-get install -y percona-server-server-5.6 percona-server-client-5.6 ;
 
 #node - move to io.js?
-curl -sL https://deb.nodesource.com/setup_0.12 | bash ;
-apt-get install -y nodejs ;
+curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash ;
+source /home/vagrant/.bashrc ;
+#nvm install iojs ;
+nvm install stable ;
 npm install npm -g ;
 
 #scala
 apt-get install -y openjdk-7-jdk ;
-#run activator stage to download all dependencies, it will create a start script in the ./bin directory called play-scala-mitch
+#run 'activator stage' to download all dependencies, it will create a start script in the ./bin directory called play-scala-mitch
 cd /codebases/play-scala-mitch ; ./activator clean stage ;
 
 #cleanup
