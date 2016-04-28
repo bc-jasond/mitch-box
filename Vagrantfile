@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "private_network", ip: "192.168.43.10"
   config.vm.synced_folder "~/dev", "/codebases"
-  config.vm.hostname = "mitch-box"
+  config.vm.hostname = "sand-box"
 
   config.vm.provision "shell", path: "provision.sh"
 
